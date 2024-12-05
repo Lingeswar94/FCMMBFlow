@@ -10,6 +10,10 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<Browserproperty>Chrome</Browserproperty>
+		<BookingPNR>QXMVFD</BookingPNR>
+		<Firstname>LINGESWAR</Firstname>
+		<Lastname>Test</Lastname>
+		<Bookingmethod>Change Flight</Bookingmethod>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -90,6 +94,10 @@
 					</suiteXmlFiles>
 					<systemPropertyVariables>
 					<Browserproperty>${Browserproperty}</Browserproperty>
+					<BookingPNR>${BookingPNR}</BookingPNR>
+					<Firstname>${Firstname}</Firstname>
+					<Lastname>${Lastname}</Lastname>
+					<Bookingmethod>${Bookingmethod}</Bookingmethod>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
