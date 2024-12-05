@@ -52,17 +52,17 @@ public class GeneralFunction {
 		loadbrowser();
 
 		//String Browser = properties.getProperty("Browserproperty");
-		String Browser=System.getProperty("Browserproperty");
+		
 		String url = properties.getProperty("Url");
 		if (GeneralFunction.getDriver() == null) {
-			if (Browser.equalsIgnoreCase("Chrome")) {
+			if (Constant.Browserproperty.equalsIgnoreCase("Chrome")) {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 
-			} else if (Browser.equalsIgnoreCase("Firefox")) {
+			} else if (Constant.Browserproperty.equalsIgnoreCase("Firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
-			} else if (Browser.equalsIgnoreCase("IE")) {
+			} else if (Constant.Browserproperty.equalsIgnoreCase("IE")) {
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 			} else {
