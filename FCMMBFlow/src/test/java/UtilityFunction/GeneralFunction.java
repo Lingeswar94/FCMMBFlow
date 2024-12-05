@@ -51,7 +51,8 @@ public class GeneralFunction {
 
 		loadbrowser();
 
-		String Browser = properties.getProperty("Browser");
+		//String Browser = properties.getProperty("Browserproperty");
+		String Browser=System.getProperty("Browserproperty");
 		String url = properties.getProperty("Url");
 		if (GeneralFunction.getDriver() == null) {
 			if (Browser.equalsIgnoreCase("Chrome")) {
