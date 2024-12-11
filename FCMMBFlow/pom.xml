@@ -14,7 +14,7 @@
 		<BookingPNR>QXMVFD</BookingPNR>
 		<Firstname>LINGESWAR</Firstname>
 		<Lastname>Test</Lastname>
-		<Bookingmethod>Change Flight</Bookingmethod>
+		<Bookingmethod>Cancel</Bookingmethod>
 		<Trip>0</Trip> 
 		<OBSegmentMonth>February</OBSegmentMonth>
 		<OBSegmentDate>13</OBSegmentDate>
