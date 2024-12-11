@@ -15,6 +15,11 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import CommonFunction.MMBLoginPage;
+import CommonFunction.MMBPaymentPage;
+import MMBChangeFlightPage.MMBChangeFlightAddon;
+import MMBChangeFlightPage.MMBDateChange;
+import MMBChangeFlightPage.MMBFlightresult;
+import MMBChangeFlightPage.MMBItinerary;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GeneralFunction {
@@ -51,8 +56,8 @@ public class GeneralFunction {
 
 		loadbrowser();
 
-		//String Browser = properties.getProperty("Browserproperty");
-		
+		// String Browser = properties.getProperty("Browserproperty");
+
 		String url = properties.getProperty("Url");
 		if (GeneralFunction.getDriver() == null) {
 			if (Constant.Browserproperty.equalsIgnoreCase("Chrome")) {
@@ -71,29 +76,22 @@ public class GeneralFunction {
 
 			GeneralFunction.getDriver().get(url);
 			GeneralFunction.getDriver().manage().window().maximize();
-			GeneralFunction.getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			GeneralFunction.getDriver().manage().timeouts().getImplicitWaitTimeout().getSeconds();
 		}
 		initElement();
 	}
 
 	public void initElement() {
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBLoginPage.getMmbLoginPage());
-		/*
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBDateChange.getmmbdatechange());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBFlightresult.getMmbFlightresult());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBChangeFlightAddon.getMmbChangeFlightAddon());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBItineraryPage.getItineraryPage());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBPaymentPage.getmmbPaymentPage());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBAddonSelection.getMmbAddonSelection());
-		 * PageFactory.initElements(CommonFuntion.getDriver(),
-		 * MMBAddonPricecheck.getMmbAddonPricecheck());
-		 */
+
+		PageFactory.initElements(GeneralFunction.getDriver(), MMBDateChange.getmmbdatechange());
+		PageFactory.initElements(GeneralFunction.getDriver(), MMBFlightresult.getMmbFlightresult());
+		PageFactory.initElements(GeneralFunction.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
+		PageFactory.initElements(GeneralFunction.getDriver(), MMBItinerary.getMmbItinerary());
+		PageFactory.initElements(GeneralFunction.getDriver(), MMBPaymentPage.getmmbPaymentPage());
+	//	PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonSelection.getMmbAddonSelection());
+	//	PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonPricecheck.getMmbAddonPricecheck());
+
 	}
 
 	@AfterSuite

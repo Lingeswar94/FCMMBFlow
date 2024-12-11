@@ -34,4 +34,17 @@ public class ExcelData {
 		String data = dataFormatter.formatCellValue(cell);
 		return data;
 	}
+	
+	public  String getPaymentMMBData(String Sheetname, int Row, int column) {
+		XSSFCell cell = workbook.getSheet(Sheetname).getRow(Row).getCell(column);
+		DataFormatter dataFormatter = new DataFormatter();
+		String data = dataFormatter.formatCellValue(cell);
+		return data;
+	}
+	public  String getBillingMMBData(String Sheetname, int Row, int column) {
+		XSSFCell cell = workbook.getSheet(Sheetname).getRow(Row).getCell(column);
+		DataFormatter dataFormatter = new DataFormatter();
+		String data = dataFormatter.formatCellValue(cell);
+		return data;
+	}
 }
