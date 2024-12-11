@@ -60,7 +60,8 @@ public class MMBLoginPage {
 			int size = bookingactionitems.size();
 			for (int i = 0; i < size; i++) {
 				String AEBookingname = bookingactionitems.get(i).getAttribute("value");
-				if (Flowname.equalsIgnoreCase(AEBookingname)) {
+				String[]method=AEBookingname.split(" ");
+				if (method[0].equalsIgnoreCase(Flowname)) {
 					bookingactionitems.get(i).click();
 					// After clicking, exit the loop
 					return;
