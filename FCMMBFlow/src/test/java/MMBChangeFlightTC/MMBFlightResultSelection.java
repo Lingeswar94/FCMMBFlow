@@ -17,21 +17,21 @@ import UtilityFunction.GeneralFunction;
 public class MMBFlightResultSelection extends GeneralFunction {
 
 
-		//Logger logger = Logger.getLogger(MMBFlightResultmethod.class);
+		Logger logger = Logger.getLogger(MMBFlightResultSelection.class);
 		ExcelData excelData = new ExcelData();
 
 		@Test
 		public void Flightresult() {
-		//	logger.info("Application moved to MMBCabin Fare Selection ");
+			logger.info("Application moved to MMBCabin Fare Selection ");
 			WebDriverWait wait = new WebDriverWait(GeneralFunction.getDriver(), Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.visibilityOfAllElements(MMBFlightresult.getMmbFlightresult().OBFareselection));
 
 			try {
 				MMBFlightresult.getMmbFlightresult().Fareselecting(Constant.OBSegmentCabinFare,Constant.IBSegmentCabinFare);
 				MMBFlightresult.getMmbFlightresult().FlightContiune();
-			//	logger.info("Application has selected Cabin Fare : ");
+				logger.info("Application has selected Cabin Fare : ");
 			} catch (Exception e) {
-			//	logger.error(e.getMessage());
+				logger.error(e.getMessage());
 			}
 		}
 		

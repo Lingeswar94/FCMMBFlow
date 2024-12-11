@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MMBFlightresult {
 	private static MMBFlightresult mmbFlightresult;
-	//Logger logger = Logger.getLogger(MMBFlightresult.class);
+	Logger logger = Logger.getLogger(MMBFlightresult.class);
 	private MMBFlightresult() {
 
 	}
@@ -60,7 +60,7 @@ public class MMBFlightresult {
 		}
 
 		if (!fareFound) {
-			//logger.error("Fare class not found: " + fareClass);
+			logger.error("Fare class not found: " + fareClass);
 		}
 	}
 
