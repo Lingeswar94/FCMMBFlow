@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -28,6 +30,8 @@ public class GeneralFunction {
 	public static WebDriver driver;
 	public static ExcelData excelData;
 
+	Logger logger=Logger.getLogger(GeneralFunction.class);
+	
 	public static WebDriver getDriver() {
 		return driver;
 	}
@@ -56,22 +60,26 @@ public class GeneralFunction {
 
 		loadbrowser();
 
+		PropertyConfigurator.configure("./src/test/resources/Config/Log4j.properties");
 		// String Browser = properties.getProperty("Browserproperty");
-
+		logger.info("Application Start for MMB ManageBooking Flow :");
 		String url = properties.getProperty("Url");
+		logger.info("Application moved to Selecting Browser for execute ");
 		if (GeneralFunction.getDriver() == null) {
 			if (Constant.Browserproperty.equalsIgnoreCase("Chrome")) {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
-
+				logger.info("Application has selected :" + Constant.Browserproperty);
 			} else if (Constant.Browserproperty.equalsIgnoreCase("Firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
+				logger.info("Application has selected :" + Constant.Browserproperty);
 			} else if (Constant.Browserproperty.equalsIgnoreCase("IE")) {
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
+				logger.info("Application has selected :" + Constant.Browserproperty);
 			} else {
-				System.out.println("Browser is not Support for MMB Change flight flow ");
+				logger.info("Application hasn't selected browser");
 			}
 
 			GeneralFunction.getDriver().get(url);
@@ -96,7 +104,8 @@ public class GeneralFunction {
 
 	@AfterSuite
 	public void Teardown() {
-		// GeneralFunction.getDriver().quit();
+		 GeneralFunction.getDriver().quit();
+		logger.info("MMB booking was successfully executed ");
 	}
 
 }
