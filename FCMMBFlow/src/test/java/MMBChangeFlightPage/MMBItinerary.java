@@ -19,10 +19,10 @@ public class MMBItinerary {
 	}
 	
 	@FindBy(xpath = "//input[@id='bodycontent_chkConfirm']")
-	public static WebElement checkbox;
+	private  WebElement checkbox;
 
 	@FindBy(xpath = "//input[@id='bodycontent_btnConfirm']")
-	public static WebElement confirmbutton;
+	private  WebElement confirmbutton;
 
 	public void getcheckbox() {
 

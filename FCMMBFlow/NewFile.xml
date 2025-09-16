@@ -4,11 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="CommonFunction.MMBLoginTC"/>
-      <class name="MMBChangeFlightTC.MMBChangeDateSelection"/>
-      <class name="MMBChangeFlightTC.MMBFlightResultSelection"/>
-      <class name="MMBChangeFlightTC.MMBChangeFlightAddonSelection"/>
-      <class name="MMBChangeFlightTC.MMBItinerarySelection"/>
-      <class name="CommonFunction.MMBPaymentTC"/>
+       <class name="MMBAddSeatTC.MMBSelectAddonSelection"/>
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
