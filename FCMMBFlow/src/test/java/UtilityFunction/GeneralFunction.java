@@ -104,8 +104,9 @@ public class GeneralFunction {
 
 	@AfterSuite
 	public void Teardown() {
-		 GeneralFunction.getDriver().quit();
+		// GeneralFunction.getDriver().quit();
 		logger.info("MMB booking was successfully executed ");
 	}
 
 }
+
