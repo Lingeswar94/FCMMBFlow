@@ -1,6 +1,9 @@
 package CommonFunction;
 
+import java.time.Duration;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import UtilityFunction.Constant;
@@ -28,10 +31,15 @@ public class MMBLoginTC extends GeneralFunction {
 		}
 
 		try {
+			
 			MMBLoginPage.getMmbLoginPage().BookingActions(Constant.Bookingmethod);
-
+			
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
+		
+	
+		
+		
 	}
 }

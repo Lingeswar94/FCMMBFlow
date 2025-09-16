@@ -3,20 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="MMBChangeFlightTC.MMBChangeFlightAddonSelection">
-        <methods>
-          <include name="BrowserSelection"/>
-          <include name="ChangeAddonpage"/>
-          <include name="Teardown"/>
-        </methods>
-      </class> <!-- MMBChangeFlightTC.MMBChangeFlightAddonSelection -->
-      <class name="CommonFunction.MMBPaymentTC">
-        <methods>
-          <include name="BrowserSelection"/>
-          <include name="getPayment"/>
-          <include name="Teardown"/>
-        </methods>
-      </class> <!-- CommonFunction.MMBPaymentTC -->
       <class name="CommonFunction.MMBLoginTC">
         <methods>
           <include name="BrowserSelection"/>
@@ -24,27 +10,6 @@
           <include name="Teardown"/>
         </methods>
       </class> <!-- CommonFunction.MMBLoginTC -->
-      <class name="MMBChangeFlightTC.MMBChangeDateSelection">
-        <methods>
-          <include name="BrowserSelection"/>
-          <include name="ChangeDateSelectionmethod"/>
-          <include name="Teardown"/>
-        </methods>
-      </class> <!-- MMBChangeFlightTC.MMBChangeDateSelection -->
-      <class name="MMBChangeFlightTC.MMBFlightResultSelection$MMBFlightResultmethod">
-        <methods>
-          <include name="BrowserSelection"/>
-          <include name="Flightresult"/>
-          <include name="Teardown"/>
-        </methods>
-      </class> <!-- MMBChangeFlightTC.MMBFlightResultSelection$MMBFlightResultmethod -->
-      <class name="MMBChangeFlightTC.MMBItinerarySelection">
-        <methods>
-          <include name="BrowserSelection"/>
-          <include name="VerifyItinerary"/>
-          <include name="Teardown"/>
-        </methods>
-      </class> <!-- MMBChangeFlightTC.MMBItinerarySelection -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
