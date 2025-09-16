@@ -18,7 +18,6 @@ import org.testng.annotations.BeforeSuite;
 
 import CommonFunction.MMBLoginPage;
 import CommonFunction.MMBPaymentPage;
-import MMBAddSeatPage.ManageSeatsAddonsPage;
 import MMBChangeFlightPage.MMBChangeFlightAddon;
 import MMBChangeFlightPage.MMBDateChange;
 import MMBChangeFlightPage.MMBFlightresult;
@@ -31,8 +30,8 @@ public class GeneralFunction {
 	public static WebDriver driver;
 	public static ExcelData excelData;
 
-	Logger logger = Logger.getLogger(GeneralFunction.class);
-
+	Logger logger=Logger.getLogger(GeneralFunction.class);
+	
 	public static WebDriver getDriver() {
 		return driver;
 	}
@@ -92,19 +91,20 @@ public class GeneralFunction {
 
 	public void initElement() {
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBLoginPage.getMmbLoginPage());
+
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBDateChange.getmmbdatechange());
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBFlightresult.getMmbFlightresult());
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBChangeFlightAddon.getMmbChangeFlightAddon());
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBItinerary.getMmbItinerary());
 		PageFactory.initElements(GeneralFunction.getDriver(), MMBPaymentPage.getmmbPaymentPage());
-		// PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonSelection.getMmbAddonSelection());
-		// PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonPricecheck.getMmbAddonPricecheck());
-		PageFactory.initElements(GeneralFunction.getDriver(), ManageSeatsAddonsPage.getManageSeatsAddonsPage());
+	//	PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonSelection.getMmbAddonSelection());
+	//	PageFactory.initElements(GeneralFunction.getDriver(), MMBAddonPricecheck.getMmbAddonPricecheck());
+
 	}
 
 	@AfterSuite
 	public void Teardown() {
-		//GeneralFunction.getDriver().quit();
+		 GeneralFunction.getDriver().quit();
 		logger.info("MMB booking was successfully executed ");
 	}
 

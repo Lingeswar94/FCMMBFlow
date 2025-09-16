@@ -103,7 +103,8 @@ public class MMBDateChange {
 		}
 	}
 
-	// Method to determine if you should navigate forward or backward in the date picker
+	// Method to determine if you should navigate forward or backward in the date
+	// picker
 	private boolean shouldNavigateForward(String currentMonth, String currentYear, String targetMonth,
 			String targetYear) {
 		int currentMonthNumber = monthStringToNumber(currentMonth);
@@ -123,7 +124,7 @@ public class MMBDateChange {
 			return true; // Move forward
 		}
 
-		return false; //Move Backward
+		return false;
 	}
 
 	// Refactored method for date selection

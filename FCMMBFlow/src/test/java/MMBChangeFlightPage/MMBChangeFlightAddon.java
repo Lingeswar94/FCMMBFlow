@@ -20,12 +20,6 @@ public class MMBChangeFlightAddon {
 		return mmbChangeFlightAddon;
 	}
 
-	
-	
-	
-	
-	
-	
 	@FindBy(xpath = "//input[@id='btnProceedBooking']")
 	public static WebElement btnContinue;
 
