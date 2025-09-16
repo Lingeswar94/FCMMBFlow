@@ -10,21 +10,30 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<Browserproperty>Chrome</Browserproperty>
-		<suiteXmlFile>testng.xml</suiteXmlFile>
-		<BookingPNR>QXMVFD</BookingPNR>
-		<Firstname>LINGESWAR</Firstname>
-		<Lastname>Test</Lastname>
-		<Bookingmethod>Cancel</Bookingmethod>
-		<Trip>0</Trip> 
-		<OBSegmentMonth>February</OBSegmentMonth>
-		<OBSegmentDate>13</OBSegmentDate>
+		<suiteXmlFile>MMBChangeFlight.xml</suiteXmlFile>
+		<BookingPNR>SBSECC</BookingPNR>
+		<Firstname>Dhanush</Firstname>
+		<Lastname>GQ</Lastname>
+		<Bookingmethod>CHANGE</Bookingmethod> 
+		<Addonmethod>CHANGE FLIGHT</Addonmethod>
+		<Trip>2</Trip> 
+		<OBSegmentMonth>October</OBSegmentMonth>
+		<OBSegmentDate>2</OBSegmentDate>
 		<OBSegmentYear>2025</OBSegmentYear>
-		<IBSegmentMonth>February</IBSegmentMonth>
-		<IBSegmentDate>18</IBSegmentDate>
+		<IBSegmentMonth>October</IBSegmentMonth>
+		<IBSegmentDate>12</IBSegmentDate>
 		<IBSegmentYear>2025</IBSegmentYear>
 		<OBSegmentCabinFare>pro</OBSegmentCabinFare>
 		<IBSegmentCabinFare>pro</IBSegmentCabinFare>
-		
+		<ADTCount>1</ADTCount>
+		<ChCount>0</ChCount>
+		<OBMainSeat>2B</OBMainSeat>
+		<OBAdultSeat>4B</OBAdultSeat>
+		<OBChildSeat>4C</OBChildSeat>
+		<IBMainSeat>4A</IBMainSeat>
+		<IBAdultSeat>4C</IBAdultSeat>
+		<IBChildSeat>4B</IBChildSeat>
+		<isReturnseat>true</isReturnseat>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -109,6 +118,7 @@
 					<Firstname>${Firstname}</Firstname>
 					<Lastname>${Lastname}</Lastname>
 					<Bookingmethod>${Bookingmethod}</Bookingmethod>
+					<Addonmethod>${Addonmethod}</Addonmethod>
 					<Trip>${Trip}</Trip>
 					<OBSegmentMonth>${OBSegmentMonth}</OBSegmentMonth>
 					<OBSegmentDate>${OBSegmentDate}</OBSegmentDate>
@@ -118,6 +128,15 @@
 					<IBSegmentYear>${IBSegmentYear}</IBSegmentYear>
 					<OBSegmentCabinFare>${OBSegmentCabinFare}</OBSegmentCabinFare>
 					<IBSegmentCabinFare>${IBSegmentCabinFare}</IBSegmentCabinFare>
+					<ADTCount>${ADTcount}</ADTCount>
+					<ChCount>${Chcount}</ChCount>
+					<OBMainSeat>${OBMainSeat}</OBMainSeat>
+					<OBAdultSeat>${OBAdultSeat}</OBAdultSeat>
+					<OBChildSeat>${OBChildSeat}</OBChildSeat>
+					<IBMainSeat>${IBMainSeat}</IBMainSeat>
+					<IBAdultSeat>${IBAdultSeat}</IBAdultSeat>
+					<IBChildSeat>${IBChildSeat}</IBChildSeat>
+					<isReturnseat>${isReturnseat}</isReturnseat>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
