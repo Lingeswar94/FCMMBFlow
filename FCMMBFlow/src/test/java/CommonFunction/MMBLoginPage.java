@@ -54,14 +54,14 @@ public class MMBLoginPage {
 		RetreiveDetails.click();
 	}
 	
-	public void BookingActions(String Flowname) {
+	public void BookingActions(String Bookingmethod) {
 		try {
 			// Avoid index out-of-bound by using < instead of <=
 			int size = bookingactionitems.size();
 			for (int i = 0; i < size; i++) {
 				String AEBookingname = bookingactionitems.get(i).getAttribute("value");
 				String[]method=AEBookingname.split(" ");
-				if (method[0].equalsIgnoreCase(Flowname)) {
+				if (method[0].equalsIgnoreCase(Bookingmethod)) {
 					bookingactionitems.get(i).click();
 					// After clicking, exit the loop
 					return;
@@ -75,3 +75,4 @@ public class MMBLoginPage {
 	}
 	
 }
+
